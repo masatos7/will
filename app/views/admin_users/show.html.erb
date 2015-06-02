@@ -1,0 +1,20 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+  <div class="users index">
+  <h2>登録会員追加</h2>
+  <%= form_for(:user, :url => {:action => 'create'}) do |f| %>
+
+  <table summary="AdminUser form fields">
+    <tr>
+      <th><%= f.label(:email) %></th>
+      <td><%= f.text_field(:email) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:created_at) %></th>
+      <td><%= f.datetime_select(:created_at, :order => [:month, :day, :year]) %></td>
+  </tr>
+</table>
+    <div class="form-buttons">
+      <%= submit_tag("Create AdminUser") %>
+    </div>
+  <% end %>
+</div>

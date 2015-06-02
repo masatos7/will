@@ -1,0 +1,23 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="admin_users edit">
+  <h2>Update User</h2>
+  <%= form_for(:admin_user, :url => {:action => 'update', :id => @admin_user.id}) do |f| %>
+
+  <table summary="AdminUser form fields">
+    <tr>
+      <th><%= f.label(:email) %></th>
+      <td><%= f.text_field(:email) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:password) %></th>
+      <td><%= f.password_field(:password) %>回</td>
+    </tr>
+</table>
+
+
+    <div class="form-buttons">
+      <%= submit_tag("Update AdminUser") %>
+    </div>
+  <% end %>
+</div>

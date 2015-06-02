@@ -1,0 +1,11 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="users will">
+  <h2>Update Will</h2>
+  <%= form_for(:your_will, :url => {:action => 'update', :id => @your_will.id}) do |f| %>
+  <%= render(:partial => "form", :locals => {:f => f}) %>
+    <div class="form-buttons">
+      <%= submit_tag("Update Will") %>
+    </div>
+  <% end %>
+</div>

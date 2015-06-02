@@ -1,0 +1,22 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="adnin_users new">
+  <h2>Create User</h2>
+  <%= error_messages_for(@admin_user) %>aaa
+  <%= form_for(:admin_user, :url => {:action => 'create'}) do |f| %>
+
+  <table summary="User form fields">
+    <tr>
+      <th><%= f.label(:email) %></th>
+      <td><%= f.text_field(:email) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:password) %></th>
+      <td><%= f.text_field(:password) %></td>
+    </tr>
+</table>
+    <div class="form-buttons">
+      <%= submit_tag("Create User") %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,24 @@
+<div class="your_wills index">
+  <h2>登録会員</h2>
+
+  <%= link_to("Add New Will", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="Will list">
+    <tr class="header">
+      <th>宛先</th>
+      <th>名前</th>
+      <th></th>
+    </tr>
+    <% @your_wills.each do |your_will| %>
+    <tr>
+      <td><%= your_will.email %></td>
+      <td><%= your_will.content %></td>
+      <td class="actions">
+        <%= link_to("詳細", {:action => 'show', :id => your_will.id}, :class => 'action show') %>
+        <%= link_to("編集", {:action => 'edit', :id => your_will.id}, :class => 'action edit') %>
+        <%= link_to("削除", {:action => 'delete', :id => your_will.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

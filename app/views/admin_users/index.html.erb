@@ -1,0 +1,23 @@
+<div class="users index">
+  <h2>登録会員</h2>
+
+  <%= link_to("新しい管理者を作成する", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="Admin list">
+    <tr class="header">
+      <th>管理者E-mail</th>
+      <th>パスワード</th>
+    </tr>
+    <% @admin_users.each do |admin_user| %>
+    <tr>
+      <td><%= admin_user.email %></td>
+      <td><%= admin_user.password %></td>      
+      <td class="actions">
+        <%= link_to("Show", {:action => 'show', :id => admin_user.id}, :class => 'action show') %>
+        <%= link_to("Edit", {:action => 'edit', :id => admin_user.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => admin_user.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

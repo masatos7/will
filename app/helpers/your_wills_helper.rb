@@ -1,0 +1,2 @@
+module YourWillsHelper
+end

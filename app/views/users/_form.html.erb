@@ -1,0 +1,23 @@
+<%= error_messages_for(@user) %>
+  <table summary="User form fields">
+    <tr>
+      <th><%= f.label(:name, "Name") %></th>
+      <td><%= f.text_field(:name) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:email) %></th>
+      <td><%= f.text_field(:email) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label(:interval) %></th>
+      <td><%= f.text_field(:interval) %>日</td>
+    </tr>
+    <tr>
+      <th><%= f.label(:count) %></th>
+      <td><%= f.text_field(:count) %>回</td>
+    </tr>
+    <tr>
+      <th><%= f.label(:password) %></th>
+      <td><%= f.password_field(:password) %>回</td>
+    </tr>
+</table>

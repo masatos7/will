@@ -1,0 +1,14 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="admin_users delete">
+  <h2>Delete AdminUsers</h2>
+  <%= form_for(:admin_user, :url => {:action => 'destroy', :id => @admin_user.id}) do |f| %>
+
+    <p>次の管理者を削除してもよろしいですか？</p>
+    <p class="reference-name"><%= @admin_user.email %></p>
+
+    <div class="form-buttons">
+      <%= submit_tag("この管理者を削除する") %>
+    </div>
+  <% end %>
+</div
