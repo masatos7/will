@@ -4,7 +4,7 @@
   <h2>User Menu</h2>
   <div class="identity">Logged in as: <%= session[:email] %></div>
   <ul>
-    <li><%= link_to("ユーザー情報", :action => show, :id => user.id) %></li>
+    <li><%= link_to("ユーザー情報", :controller => 'users') %></li>
     <li><%= link_to("最後の一言", :controller => 'your_wills') %></li>
     <li><%= link_to("Logout", :action => 'logout') %></li>
   </ul>
