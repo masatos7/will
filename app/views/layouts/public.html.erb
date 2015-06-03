@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will</title>
+</head>
+<body>
+
+  <div id='header'>logo,ログイン
+    <%= link_to('ログイン', {:controller => 'access', :action => 'login'})%>
+    <%= link_to('新規登録', {:controller => 'access', :action => 'login'})%>
+  </div>
+  <div id='navigation'>
+  	<ul>
+  	 <li>「最後の言葉」とは</li>
+  	 <li>使い方</li>
+   	 <li>最後の言葉</li>
+  	</ul>
+  </div>
+<%= yield %>
+
+</body>
+</html>
