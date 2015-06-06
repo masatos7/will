@@ -3,6 +3,6 @@ class RemovePasswordFromAdminUsers < ActiveRecord::Migration
   	remove_column "admin_users", "password"
   end
   def down
-  	remove_column "admin_users", "password", :strin , :limig => 40
+  	remove_column "admin_users", "password", :string , :limit => 40
   end
 end

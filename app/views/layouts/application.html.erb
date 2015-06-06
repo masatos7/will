@@ -4,12 +4,12 @@
   <title>Will</title>
 </head>
 <body>
-      <% if !flash[:notice].blank? %>
-        <div class="notice">
-          <%= flash[:notice] %>
-        </div>
-      <% end %>
+  <% if !flash[:notice].blank? %>
+    <div class="notice">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
 <%= yield %>
-
+<%= debug(params) if Rails.env.development? %>
 </body>
 </html>

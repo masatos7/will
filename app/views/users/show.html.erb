@@ -1,8 +1,7 @@
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
   <div class="users show">
   <h2>ユーザー設定</h2>
-  <%= form_for(:user, :url => {:action => 'create'}) do |f| %>
-
+  <%= form_for(:user, :url => {:action => 'update', :id => @user.id}) do |f| %>
   <table summary="User form fields">
     <tr>
       <th><%= f.label(:name, "Name") %></th>
