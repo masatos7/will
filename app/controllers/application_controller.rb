@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def admin_confirm_logged_in
     unless session[:admin_user_id]
-      flash[:notice] = "ログインしてください"
+      flash[:notice] = "このページを見るには管理者権限が必要です。ログインしてください"
       redirect_to(:controller => 'admin_access', :action => 'login')
       return false 
     else

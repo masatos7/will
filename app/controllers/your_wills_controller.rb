@@ -4,15 +4,16 @@ class YourWillsController < ApplicationController
   before_action :confirm_logged_in
 
   def index
-    @your_wills = YourWill.all
+    find_your_will
   end
 
   def show
-    find_your_will
+    @your_will = YourWill.find(params[:id])
   end
 
   def new
     @your_will = YourWill.new
+    @your_will.user_id = session[:user_id]
   end
 
   def create
@@ -55,9 +56,9 @@ class YourWillsController < ApplicationController
     end
     def find_your_will
       if session[:admin_user_id]
-        @your_will = YourWill.find(params[:id])
+        @your_wills = YourWill.all
       elsif session[:user_id]
-        @your_will = YourWill.find(session[:user_id])
+        @your_wills = YourWill.where(:user_id => session[:user_id])
       end
     end
 end

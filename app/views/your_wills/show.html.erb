@@ -2,7 +2,19 @@
 
 <div class="users will">
   <h2>Will 内容</h2>
-  <%= form_for(:your_will, :url => {:action => 'update', :id => @your_will.id}) do |f| %>
-  <%= render(:partial => "form", :locals => {:f => f}) %>
-  <% end %>
+  <table summary="YourWill form fields">
+    <tr>
+      <th>ユーザーID</th>
+      <td><%= @your_will.user_id %></td>
+    </tr>
+    <tr>
+      <th>宛先メールアドレス</th>
+      <td><%= @your_will.email %></td>
+    </tr>
+    <tr>
+      <th>内容</th>
+      <td><%= @your_will.content %></td>
+    </tr>
+  </table>
+  <%= link_to("編集する", {:action => 'edit', :id => @your_will.id}) %>
 </div>

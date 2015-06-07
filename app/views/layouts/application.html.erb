@@ -6,11 +6,15 @@
 <body>
   <% if session[:admin_email] %>
     <div class="identity">Admin Logged in as: <%= session[:admin_email] %></div>
+    <%= link_to("AdminLogout", :controller =>'admin_access', :action => 'logout') %>
   <% end %>
   
   <% if session[:email] %>
     <div class="identity">Logged in as: <%= session[:email] %></div>
+    <%= link_to("Logout", :controller => 'access', :action => 'logout') %>
   <% end %>
+
+
 
   <% if !flash[:notice].blank? %>
     <div class="notice">

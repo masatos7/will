@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   layout 'application'
 
-  before_action :confirm_logged_in
+  before_action :confirm_logged_in, :except => [:new, :create, :complete]
+  before_action :admin_confirm_logged_in, :except => [:new, :show, :update, :edit, :create, :complete]
   before_action :find_user
   
   def index
@@ -19,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "Subject created sccessfully."
-      redirect_to(:action => 'index')
+      redirect_to(:action => 'complete')
     else
       render('new')
     end
@@ -48,6 +49,10 @@ class UsersController < ApplicationController
     user = User.find(params[:id]).destroy
     flash[:notice] = "AdminUser '#{user.email}' destroyed sccessfully."
     redirect_to(:action => 'index')
+  end
+
+  def complete
+
   end
 
   private

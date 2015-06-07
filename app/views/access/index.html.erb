@@ -5,7 +5,7 @@
   <div class="identity">Logged in as: <%= session[:email] %><%= session[:user_id] %></div>
   <ul>
     <li><%= link_to("ユーザー情報", {:controller => 'users', :action => 'show'}) %></li>
-    <li><%= link_to("最後の一言", {:controller => 'your_wills', :action => 'show'}) %></li>
+    <li><%= link_to("最後の一言", {:controller => 'your_wills', :action => 'index'}) %></li>
     <li><%= link_to("Logout", :action => 'logout') %></li>
   </ul>
 </div>

@@ -1,7 +1,7 @@
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
 
 <div class="users will">
-  <h2>Update Will</h2>
+  <h2>新しい言葉</h2>
   <%= form_for(:your_will, :url => {:action => 'create'}) do |f| %>
   <%= render(:partial => "form", :locals => {:f => f}) %>
     <div class="form-buttons">

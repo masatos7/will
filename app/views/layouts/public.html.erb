@@ -4,10 +4,10 @@
   <title>Will</title>
 </head>
 <body>
-
-  <div id='header'>logo,ログイン
+  <div id='header'>
+    <%= link_to('管理者ログイン', {:controller => 'admin_access', :action => 'login'})%>
     <%= link_to('ログイン', {:controller => 'access', :action => 'login'})%>
-    <%= link_to('新規登録', {:controller => 'access', :action => 'login'})%>
+    <%= link_to('新規登録', {:controller => 'users', :action => 'new'})%>
   </div>
   <div id='navigation'>
   	<ul>

@@ -1,15 +1,12 @@
 <%= error_messages_for(@your_will) %>
   <table summary="YourWill form fields">
     <tr>
-      <th><%= f.label('ID') %></th>
-      <td><%= f.text_field(:user_id) %></td>
-    </tr>
-    <tr>
       <th><%= f.label('宛先メールアドレス') %></th>
       <td><%= f.text_field(:email) %></td>
     </tr>
     <tr>
       <th><%= f.label('内容') %></th>
-      <td><%= f.text_field(:content) %></td>
+      <td><%= f.text_area(:content) %></td>
     </tr>
+    <%= hidden_field :your_will, :user_id %>
 </table>
