@@ -2,13 +2,13 @@ class UsersController < ApplicationController
   layout 'application'
 
   before_action :confirm_logged_in
+  before_action :find_user
   
   def index
     @users = User.all
   end
 
   def show
-    @user = User.find(params[:id])
   end
 
   def new
@@ -39,6 +39,7 @@ class UsersController < ApplicationController
     end
   end
 
+
   def delete
     @user = User.find(params[:id])
   end
@@ -52,5 +53,10 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name, :email, :interval, :count, :password)
+    end
+    def find_user
+      if session[:user_id]
+        @user = User.find(session[:user_id])
+      end
     end
 end

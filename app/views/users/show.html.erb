@@ -1,33 +1,12 @@
 <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
   <div class="users show">
   <h2>ユーザー設定</h2>
-  <%= form_for(:user, :url => {:action => 'update', :id => @user.id}) do |f| %>
-  <table summary="User form fields">
-    <tr>
-      <th><%= f.label(:name, "Name") %></th>
-      <td><%= f.text_field(:name) %></td>
-    </tr>
-    <tr>
-      <th><%= f.label(:email) %></th>
-      <td><%= f.text_field(:email) %></td>
-    </tr>
-    <tr>
-      <th><%= f.label(:interval) %></th>
-      <td><%= f.text_field(:interval) %></td>
-    </tr>
-    <tr>
-      <th><%= f.label(:count) %></th>
-      <td><%= f.text_field(:count) %></td>
-    </tr>
-    <tr>
-      <th><%= f.label(:created_at) %></th>
-      <td><%= f.text_field(:created_at) %></td>
-  </tr>
-</table>
-    <div class="form-buttons">
-      <%= submit_tag("Create User") %>
-    </div>
-  <% end %>
+  <p><%= @user.name %></p>
+  <p><%= @user.email %></p>
+  <p><%= @user.interval %></p>
+  <p><%= @user.count %></p>
+  <p><%= @user.created_at %></p>
+  <p><%= @user.password %></p>
 </div>
 
 

@@ -5,12 +5,14 @@
 
   <table class="listing" summary="Will list">
     <tr class="header">
+      <th>ID</th>
       <th>宛先</th>
       <th>名前</th>
       <th></th>
     </tr>
     <% @your_wills.each do |your_will| %>
     <tr>
+      <td><%= your_will.user_id %></td>
       <td><%= your_will.email %></td>
       <td><%= your_will.content %></td>
       <td class="actions">

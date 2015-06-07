@@ -4,6 +4,14 @@
   <title>Will</title>
 </head>
 <body>
+  <% if session[:admin_email] %>
+    <div class="identity">Admin Logged in as: <%= session[:email] %></div>
+  <% end %>
+  
+  <% if session[:email] %>
+    <div class="identity">Logged in as: <%= session[:email] %></div>
+  <% end %>
+
   <% if !flash[:notice].blank? %>
     <div class="notice">
       <%= flash[:notice] %>

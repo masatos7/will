@@ -8,7 +8,7 @@ class YourWillsController < ApplicationController
   end
 
   def show
-    @your_will = YourWill.find(params[:id])
+    find_your_will
   end
 
   def new
@@ -51,6 +51,13 @@ class YourWillsController < ApplicationController
 
   private
     def your_will_params
-      params.require(:your_will).permit(:email, :content)
+      params.require(:your_will).permit(:user_id,:email, :content)
+    end
+    def find_your_will
+      if session[:admin_user_id]
+        @your_will = YourWill.find(params[:id])
+      elsif session[:user_id]
+        @your_will = YourWill.find(session[:user_id])
+      end
     end
 end

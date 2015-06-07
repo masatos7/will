@@ -2,10 +2,10 @@
 
 <div class="menu">
   <h2>User Menu</h2>
-  <div class="identity">Logged in as: <%= session[:email] %></div>
+  <div class="identity">Logged in as: <%= session[:email] %><%= session[:user_id] %></div>
   <ul>
-    <li><%= link_to("ユーザー情報", :controller => 'users') %></li>
-    <li><%= link_to("最後の一言", :controller => 'your_wills') %></li>
+    <li><%= link_to("ユーザー情報", {:controller => 'users', :action => 'show'}) %></li>
+    <li><%= link_to("最後の一言", {:controller => 'your_wills', :action => 'show'}) %></li>
     <li><%= link_to("Logout", :action => 'logout') %></li>
   </ul>
 </div>
