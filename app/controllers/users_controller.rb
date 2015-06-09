@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:notice] = "Subject update sccessfully."
-      redirect_to(:action => 'index')
+      redirect_to(:controller => 'access', :action => 'index')
     else
       render('edit')
     end
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:name, :email, :interval, :count, :password)
+      params.require(:user).permit(:name, :email, :interval, :count, :password, :password_confirmation)
     end
     def find_user
       if session[:user_id]

@@ -1,2 +1,14 @@
-<h1>YourWills#delete</h1>
-<p>Find me in app/views/your_wills/delete.html.erb</p>
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="your_will delete">
+  <h2>遺書の削除</h2>
+  <%= form_for(:your_will, :url => {:action => 'destroy', :id => @your_will.id}) do |f| %>
+
+    <p>次の遺書を削除してもよろしいですか？</p>
+    <p class="reference-name"><%= @your_will.content %></p>
+
+    <div class="form-buttons">
+      <%= submit_tag("この遺書を削除する") %>
+    </div>
+  <% end %>
+</div
