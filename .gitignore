@@ -13,4 +13,4 @@
 /tmp
 
 #
-/config/environments/*
+config/environments/*
