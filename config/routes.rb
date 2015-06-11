@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
+  root to: "home#index"
 
-  
-  root "public#index"
+  devise_for :users
+
   get 'show/:permalink', :to => 'public#show'
-
   get 'admin', :to => "admin_access#index"
 
   match ':controller(/:action(/:id))', :via =>  [:get, :post]

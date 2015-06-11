@@ -1,0 +1,24 @@
+<div class="users index">
+  <h2>登録会員</h2>
+
+  <%= link_to("Add New User", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="Subject list">
+    <tr class="header">
+      <th>Users</th>
+      <th>E-mail</th>
+    </tr>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td class="actions">
+        <%= link_to("最後の言葉", {:controller => 'your_wills', :action => 'show', :id => user.id}) %>
+        <%= link_to("詳細", {:action => 'show', :id => user.id}) %>
+        <%= link_to("編集", {:action => 'edit', :id => user.id}, :class => 'action edit') %>
+        <%= link_to("削除", {:action => 'delete', :id => user.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

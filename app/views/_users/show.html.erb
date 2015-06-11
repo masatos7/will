@@ -1,0 +1,26 @@
+<div class="users show">
+  <h2>ユーザー情報</h2>
+  <table>
+    <tr>
+      <td>名前</td>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <td>メールアドレス</td>
+      <td><%= @user.email %></td>
+    </tr>
+    <tr>
+      <td>パスワード</td>
+      <td>●●●●</td>
+    </tr>
+  </table>
+  <p><%= @user.password %></p>
+  <h3>死亡判定方法</h3>
+  <p><strong><%= @user.interval %></strong>日ごとに</p>
+  <p><strong><%= @user.count %></strong>回送られるメールのURLを1度もクリックしなかったら</p>
+  <p><%= @user.created_at %></p>
+  <p><%= link_to("編集する", {:action => 'edit', :id => @user.id}) %></p>
+  <p><%= link_to("戻る", :controller => 'access') %></p>
+</div>
+
+

@@ -2,8 +2,32 @@
 <html>
 <head>
   <title>Will</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <nav>
+    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
+    <% if user_signed_in? %> 
+      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+      <!-- *_path はUserモデルを作成したときに、
+        deviseにより自動で作成されてますので、rake routesで確認できます -->
+      Logged in as <strong><%= current_user.email %></strong>.
+      <%= link_to 'プロフィール変更', edit_user_registration_path %> |
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "ユーザー登録", new_user_registration_path %> |
+      <%= link_to "ログイン", new_user_session_path %>
+    <% end %>
+    <%= link_to "HOME", new_user_session_path %>
+    <%= link_to "Willとは", new_user_session_path %>
+    <%= link_to "使い方", new_user_session_path %>
+    <%= link_to("最後の言葉", {:controller => 'your_wills', :action => 'show'}) %>
+    <%= link_to "ユーザー設定", new_user_session_path %>
+  </nav>
+</header>
   <% if session[:admin_email] %>
     <div class="identity">Admin Logged in as: <%= session[:admin_email] %></div>
     <%= link_to("AdminLogout", :controller =>'admin_access', :action => 'logout') %>
