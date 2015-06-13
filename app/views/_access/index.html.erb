@@ -1,0 +1,10 @@
+<% @page_title = "User Menu" %>
+
+<div class="menu">
+  <h2>User Menu</h2>
+  <ul>
+    <li><%= link_to("ユーザー情報", {:controller => 'users', :action => 'show'}) %></li>
+    <li><%= link_to("最後の一言", {:controller => 'your_wills', :action => 'index'}) %></li>
+    <li><%= link_to("Logout", :action => 'logout') %></li>
+  </ul>
+</div>

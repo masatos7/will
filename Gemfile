@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
 
+gem 'therubyracer' # javascript runtime。lessをコンパイルするために必要
+gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
+gem 'twitter-bootstrap-rails' # Bootstrapの本体
+
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'

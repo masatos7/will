@@ -13,13 +13,13 @@ class YourWillsController < ApplicationController
 
   def new
     @your_will = YourWill.new
-    @your_will.user_id = session[:user_id]
+    @your_will.user_id = current_user.id
   end
 
   def create
     @your_will = YourWill.new(your_will_params)
     if @your_will.save
-      flash[:notice] = "Subject created sccessfully."
+      flash[:notice] = "新しい遺書が作成されました。"
       redirect_to(:action => 'index')
     else
       render('new')
@@ -54,11 +54,12 @@ class YourWillsController < ApplicationController
     def your_will_params
       params.require(:your_will).permit(:user_id,:email, :content)
     end
+
     def find_your_will
       if session[:admin_user_id]
         @your_wills = YourWill.all
-      elsif session[:user_id]
-        @your_wills = YourWill.where(:user_id => session[:user_id])
+      elsif user_signed_in?
+        @your_wills = YourWill.where(:user_id => current_user.id)
       end
     end
 end

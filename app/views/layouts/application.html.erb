@@ -5,9 +5,15 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 <body>
-<header>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div id="logo">
+    最後の一言
+  </div>
   <nav>
     <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
     <% if user_signed_in? %> 
@@ -15,39 +21,29 @@
       <!-- *_path はUserモデルを作成したときに、
         deviseにより自動で作成されてますので、rake routesで確認できます -->
       Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'プロフィール変更', edit_user_registration_path %> |
+      <%= link_to 'ユーザー設定', edit_user_registration_path %> |
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to "ユーザー登録", new_user_registration_path %> |
       <%= link_to "ログイン", new_user_session_path %>
     <% end %>
-    <%= link_to "HOME", new_user_session_path %>
-    <%= link_to "Willとは", new_user_session_path %>
-    <%= link_to "使い方", new_user_session_path %>
-    <%= link_to("最後の言葉", {:controller => 'your_wills', :action => 'show'}) %>
-    <%= link_to "ユーザー設定", new_user_session_path %>
+    <ul class="nav pull-right">
+      <li><%= link_to "HOME", :controller => '/public' %></li>
+      <li><%= link_to "Willとは", :controller => '/public', :action => 'about' %></li>
+      <li><%= link_to "使い方", :controller => '/public', :action => 'how_to_use' %></li>
+      <li><%= link_to("最後の言葉", :controller => '/your_wills') %></li>
+    </ul>
   </nav>
 </header>
   <% if session[:admin_email] %>
     <div class="identity">Admin Logged in as: <%= session[:admin_email] %></div>
     <%= link_to("AdminLogout", :controller =>'admin_access', :action => 'logout') %>
   <% end %>
-  
-  <% if session[:email] %>
-    <div class="identity">Logged in as: <%= session[:email] %></div>
-    <%= link_to("Logout", :controller => 'access', :action => 'logout') %>
-  <% end %>
-
-
-
-  <% if !flash[:notice].blank? %>
-    <div class="notice">
-      <%= flash[:notice] %>
-    </div>
-  <% end %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
-  <%= debug(params) if Rails.env.development? %>
+  <div class="container">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
 </body>
 </html>

@@ -6,9 +6,9 @@ class ApplicationController < ActionController::Base
   private
 
   def confirm_logged_in
-    unless session[:user_id] || session[:admin_user_id]
+    unless user_signed_in? || session[:admin_user_id]
       flash[:notice] = "ログインしてください"
-      redirect_to(:controller => 'access', :action => 'login')
+      redirect_to(:controller => 'users', :action => 'sign_in')
       return false 
     else
       return true
