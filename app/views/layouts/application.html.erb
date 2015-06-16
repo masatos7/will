@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Will</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,40 +12,82 @@
   <![endif]-->
 </head>
 <body>
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header>
   <div id="logo">
     最後の一言
   </div>
-  <nav>
-    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
-    <% if user_signed_in? %> 
-      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
-      <!-- *_path はUserモデルを作成したときに、
-        deviseにより自動で作成されてますので、rake routesで確認できます -->
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'ユーザー設定', edit_user_registration_path %> |
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "ユーザー登録", new_user_registration_path %> |
-      <%= link_to "ログイン", new_user_session_path %>
-    <% end %>
-    <ul class="nav pull-right">
-      <li><%= link_to "HOME", :controller => '/public' %></li>
-      <li><%= link_to "Willとは", :controller => '/public', :action => 'about' %></li>
-      <li><%= link_to "使い方", :controller => '/public', :action => 'how_to_use' %></li>
-      <li><%= link_to("最後の言葉", :controller => '/your_wills') %></li>
-    </ul>
+        <% if user_signed_in? %> 
+        <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+        <!-- *_path はUserモデルを作成したときに、
+          deviseにより自動で作成されてますので、rake routesで確認できます -->
+        Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to 'ユーザー設定', edit_user_registration_path %> |
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "ユーザー登録", new_user_registration_path %> |
+          <%= link_to "ログイン", new_user_session_path %>
+        <% end %>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div><!-- navbar-header -->
+      <div class="collapse navbar-collapse" id="collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "HOME", :controller => '/public' %></li>
+          <li><%= link_to "Willとは", :controller => '/public', :action => 'about' %></li>
+          <li><%= link_to "使い方", :controller => '/public', :action => 'how_to_use' %></li>
+          <li><%= link_to("最後の言葉", :controller => '/your_wills') %></li>
+        </ul>
+      </div><!-- collapse navbar-collpse -->
+    </div><!-- container -->
   </nav>
 </header>
-  <% if session[:admin_email] %>
-    <div class="identity">Admin Logged in as: <%= session[:admin_email] %></div>
-    <%= link_to("AdminLogout", :controller =>'admin_access', :action => 'logout') %>
-  <% end %>
-  <div class="container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
+<div class="main">
+  <div class="page" id="mission">
+    <div class="content container">
+      <% if session[:admin_email] %>
+        <div class="identity">Admin Logged in as: <%= session[:admin_email] %></div>
+        <%= link_to("AdminLogout", :controller =>'admin_access', :action => 'logout') %>
+      <% end %>
+      <div class="container">sss
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+        <%= debug(params) if Rails.env.development? %>
+      </div><!-- container -->
+      <div class="col-sm-3"><article><p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+      </div><!-- col-sm-3 -->
+      <div class="col-sm-9">
+        <article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </article>
+      </div><!-- col-sm-9 -->
+    </div><!-- content container -->
   </div>
+</div><!-- main -->
+<footer>
+  <div class="content container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-default" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a>aaa</a></li>
+          <li><a>個人情報保護方針</a></li>
+        </ul>
+      </nav>
+    </div><!-- row -->
+  </div><!-- content container -->
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -23,5 +23,10 @@ module Will
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.active_record.raise_in_transactional_callbacks = true
+    # http://kentana20.hatenablog.com/entry/2014/07/21/193535
+    config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
   end
 end
+
+

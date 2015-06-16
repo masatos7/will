@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+
+body{
+	padding-top: 70px;
+}
+
+.navbar {
+	border-radius: 0;
+	border: 0;
+}
+
+footer .navbar-default{
+	background-color: transparent;
+}
