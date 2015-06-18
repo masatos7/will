@@ -19,10 +19,14 @@ body{
 	padding-top: 70px;
 }
 
-.navbar {
-	border-radius: 0;
-	border: 0;
+header .navbar {
 }
+
+header .navbar-default {
+	background-color: transparent;
+	border: none;
+}
+
 
 footer .navbar-default{
 	background-color: transparent;
