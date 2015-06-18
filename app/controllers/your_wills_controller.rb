@@ -3,6 +3,9 @@ class YourWillsController < ApplicationController
 
   before_action :confirm_logged_in
 
+  # deliverメソッドを使って、メールを送信する
+  User = Struct.new(:name, :email)
+
   def index
     find_your_will
   end
@@ -32,6 +35,10 @@ class YourWillsController < ApplicationController
 
   def update
     @your_will = YourWill.find(params[:id])
+    # deliverメソッドを使って、メールを送信する
+    user = User.new("name", "masatos7@gmail.com")
+    PostMailer.post_email(user, @your_will.email).deliver
+
     if @your_will.update_attributes(your_will_params)
       flash[:notice] = "Subject update sccessfully."
       redirect_to(:action => 'index')

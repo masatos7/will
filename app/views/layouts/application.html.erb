@@ -14,17 +14,21 @@
 <body>
 <header>
   <div class="container">
-    <% if user_signed_in? %> 
-    <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
-    <!-- *_path はUserモデルを作成したときに、
-      deviseにより自動で作成されてますので、rake routesで確認できます -->
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'ユーザー設定', edit_user_registration_path %> |
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "ユーザー登録", new_user_registration_path %> |
-      <%= link_to "ログイン", new_user_session_path %>
-    <% end %>
+    <div class="col-sm-6">
+      <% if user_signed_in? %> 
+      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+      <!-- *_path はUserモデルを作成したときに、
+        deviseにより自動で作成されてますので、rake routesで確認できます -->
+      Logged in as <strong><%= current_user.email %></strong>.
+    </div>
+    <div class="text-right col-sm-6">
+      <%= link_to 'ユーザー設定', edit_user_registration_path %> |
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "ユーザー登録", new_user_registration_path %> |
+        <%= link_to "ログイン", new_user_session_path %>
+      <% end %>
+    </div>
   </div><!-- container -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -66,21 +70,11 @@
         <%= yield %>
         <%= debug(params) if Rails.env.development? %>
       </div><!-- container -->
-        <article>
-      <div class="col-sm-3"><article><p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </article>
-      </div><!-- col-sm-3 -->
-      <div class="col-sm-9">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </article>
-      </div><!-- col-sm-9 -->
     </div><!-- content container -->
   </div>
 </div><!-- main -->
 <footer>
-  <div class="content container">
+  <div class="container">
     <div class="row">
       <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
         <ul class="nav navbar-nav navbar-right">
