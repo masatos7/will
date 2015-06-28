@@ -1,2 +1,12 @@
-<h1>Comments#new</h1>
-<p>Find me in app/views/comments/new.html.erb</p>
+<div class="page">
+	<div class="container">
+	  <h2>ご意見・お問い合わせ</h2>
+		<%= form_for(:comment, :url => {:action => 'create'}) do |f| %>
+		  <%= render(:partial => "form", :locals => {:f => f}) %>
+	    <div class="text-center">
+	    	<%= submit_tag("送信する", class: "btn btn-success btn-lg") %>
+	  	</div>
+  	<% end %>
+	</div><!-- container -->
+</div><!-- page -->
+

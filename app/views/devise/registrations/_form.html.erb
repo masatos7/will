@@ -1,0 +1,11 @@
+  <div class="alert alert-danger" role="alert"><%= devise_error_messages! %></div>
+  <%= f.label 'メールアドレス' %>
+  <%= f.email_field :email, autofocus: true, class: "form-control" %>
+  <%= f.label 'パスワード' %>
+  <% if @minimum_password_length %>
+  <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <% end %>
+  <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+  <%= f.label '確認用パスワード' %>
+  <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+ 

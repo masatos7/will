@@ -1,2 +1,12 @@
-<h1>Comments#edit</h1>
-<p>Find me in app/views/comments/edit.html.erb</p>
+<div class="comment">
+  <h2>ご意見・お問い合わせ</h2>
+  <%= form_for(:comment, :url => {:action => 'update', :id => @your_will.id}) do |f| %>
+  <%= render(:partial => "form", :locals => {:f => f}) %>
+    <div class="form-buttons">
+      <%= submit_tag("Update Will") %>
+    </div>
+  <% end %>
+</div>
+<button type="button" class="btn btn-default btn-lg">
+  <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+</button>

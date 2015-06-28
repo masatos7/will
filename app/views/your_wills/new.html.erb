@@ -1,11 +1,12 @@
-<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
-
-<div class="users will">
-  <h2>新しい言葉</h2>
-  <%= form_for(:your_will, :url => {:action => 'create'}) do |f| %>
-  <%= render(:partial => "form", :locals => {:f => f}) %>
-    <div class="form-buttons">
-      <%= submit_tag("Create Will") %>
-    </div>
-  <% end %>
-</div>
+<div class="page">
+	<div class="container">
+	  <h2>新しい言葉</h2>
+	  <%= form_for(:your_will, :url => {:action => 'create'}) do |f| %>
+	  <%= render(:partial => "form", :locals => {:f => f}) %>
+	    <div class="text-center">
+	      <%= submit_tag("作成する", :class => 'btn btn-success btn-lg') %>
+	    </div>
+	  <% end %>
+		<%= link_to("戻る", {:action => 'index'}, :class => 'btn btn-primary') %>
+	</div><!-- container -->
+</div><!-- page -->

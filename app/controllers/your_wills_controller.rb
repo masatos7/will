@@ -14,7 +14,7 @@ class YourWillsController < ApplicationController
     @your_will = YourWill.find(params[:id])
   end
 
-  def new
+  def new 
     @your_will = YourWill.new
     @your_will.user_id = current_user.id
   end

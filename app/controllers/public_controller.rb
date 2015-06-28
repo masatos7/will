@@ -1,5 +1,5 @@
 class PublicController < ApplicationController
-  layout 'application'
+  layout 'public'
 
   def index
     if session[:user_id] || session[:admin_user_id]

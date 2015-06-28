@@ -1,0 +1,10 @@
+<%= error_messages_for(@comment) %>
+<div class="form-group">
+<%= f.label('ユーザーID') %>
+<%= f.text_field(:user_id, :class => 'form-control') %>
+<%= f.label('メールアドレス') %>
+<%= f.text_field(:email, :class => 'form-control') %>
+<%= f.label('内容') %>
+<%= f.text_area(:comment, :class => 'form-control') %>
+<%= hidden_field :comment, :user_id %>
+</div><!-- form-horizontal -->

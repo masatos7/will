@@ -1,37 +1,40 @@
-<div class="your_wills index">
-  <h2>最後の一言</h2>
-  <% if @your_wills.length != 0 %>
-  <div class="panel panel-default">
-    <!-- Default panel contents -->
-    <div class="panel-heading">Panel heading</div>
-    <table class="table">
-      <tr class="header">
-        <th>ID</th>
-        <th>宛先</th>
-        <th>内容</th>
-        <th>編集</th>
-      </tr>
-      <% @your_wills.each do |your_will| %>
-      <tr>
-        <td><%= your_will.user_id %></td>
-        <td><%= your_will.email %></td>
-        <td><%= your_will.content %></td>
-        <td>
-          <%= link_to("編集", {:action => 'edit', :id => your_will.id}, :class => 'action edit') %>
-          <%= link_to("詳細", {:action => 'show', :id => your_will.id}, :class => 'action show') %>
-          <%= link_to("削除", {:action => 'delete', :id => your_will.id}, :class => 'action delete') %>
-        </td>
-      </tr>
-      <% end %>
-    </table>
-  </div><!-- panel panel-default -->
-  <% elsif %>
-    <p>まだ遺書が追加されてません。</p>
-  <% end %>
-  <button type="button" class="btn btn-default btn-lg">
-    <%= link_to("遺書を追加する", {:action => 'new'}, :class => 'action new') %>
-  </button>
-  <button type="button" class="btn btn-default btn-lg">
-    <%= link_to("戻る", :controller => 'access') %>
-  </button>
-</div>
+<div class="page">
+  <div class="container">
+    <h2>最後の言葉</h2>
+    <% if notice %>
+    <div class="alert alert-success" role="alert"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger" role="alert"><%= alert %></div>
+    <% end %>
+    <% if @your_wills.length != 0 %>
+    <div class="panel panel-default">
+      <table class="table table-striped">
+        <tr class="header">
+          <th>ID</th>
+          <th>宛先</th>
+          <th>内容</th>
+          <th>編集</th>
+        </tr>
+        <% @your_wills.each do |your_will| %>
+        <tr>
+          <td><%= your_will.user_id %></td>
+          <td><%= your_will.email %></td>
+          <td><%= your_will.content %></td>
+          <td>
+            <%= link_to("編集", {:action => 'edit', :id => your_will.id}, :class => 'btn btn-primary btn-sm') %>
+            <%= link_to("詳細", {:action => 'show', :id => your_will.id}, :class => 'btn btn-primary btn-sm') %>
+            <%= link_to("削除", {:action => 'delete', :id => your_will.id}, :class => 'btn btn-primary btn-sm') %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+    </div><!-- panel panel-default -->
+    <% elsif %>
+      <p>まだ遺書が追加されてません。</p>
+    <% end %>
+    <div class="text-center">
+      <%= link_to("遺書を追加する", {:action => 'new'}, :class => 'btn btn-success btn-success-custom btn-lg text-center') %>
+    </div><!-- container -->
+  </div><!-- container -->
+</div><!-- page -->

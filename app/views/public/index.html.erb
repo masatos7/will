@@ -1,40 +1,74 @@
-<ol class="breadcrumb">
-  <li class="active">HOME</li>
-</ol><!-- breadcrumbs -->
-<h1>Public#index</h1>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
+<div class="page" id="home">
+	<div class="container-fluid">
+		<div class="row message">
+		  <h2>もし、あなたが死んだら？</h2>
+	  </div><!-- row -->
+	  <div class="row">
+		  <div class="box box01 col-xs-6 col-sm-4 col-lg-4"><h3>ペットは？</h3></div>
+			<div class="box box02 col-xs-6 col-sm-4 col-lg-4"><h3>恋人は？</h3></div>
+			<div class="box box03 col-xs-6 col-sm-4 col-lg-4"><h3>家族は？</h3></div>
+			<div class="box box04 col-xs-6 col-sm-4 col-lg-4"><h3>友人は？</h3></div>
+			<div class="box box05 col-xs-6 col-sm-4 col-lg-4"><h3>娘は？</h3></div>
+			<div class="box box06 col-xs-6 col-sm-4 col-lg-4"><h3>お金は？</h3></div>
+		</div><!-- row -->
+  </div><!-- container -->
+	<div class="row message">
+	  <h2>一体、どうするだろう？</h2>
+  </div><!-- row -->
+</div><!-- page -->
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="..." alt="...">
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
-    <div class="item">
-      <img src="..." alt="...">
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
-    ...
-  </div>
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-<p>Find me in app/views/public/index.html.erb</p>
-<p>公開されている遺書が見える予定</p>
+<div class="page" id="about">
+	<div class="container text-center">
+		<article class="service col-sm-12 col-lg-12">
+		<h2>Willとは？</h2>
+		<p>そんな誰にでも起こりうる突然の死に備えて、<br>死んだ人間から遺された人への伝言、<br>つまり「遺書」を誰でも利用できるようにします。</p>
+		</article>
+	</div>
+</div><!-- page -->
+
+<div class="page" id="how_to_use">
+	<div class="container">
+		<h2>使い方</h2>
+	  <article class="service col-sm-4 col-lg-4">
+		  <div class="icon-lg">
+			  <span class="glyphicon glyphicon-envelope icon-lg"></span>
+			</div><!-- icon-lg -->
+			<h3>遺書の登録</h3>
+			<p>遺書を届けたい相手のメールアドレスを登録して、遺書を書きます。</p>
+	  </article>
+	  <article class="service col-sm-4 col-lg-4">
+	  	<div class="icon-lg">
+		  	<span class="glyphicon glyphicon-user icon-lg"></span>
+	  	</div><!-- icon-lg -->
+			<h3>死亡判定の設定</h3>
+			<p>死亡判定は本人宛に送られるメールを一定の回数クリックしなかったことによって死亡と判定され、死亡判定されると登録された遺書がそれぞれの宛先に送られます。</p>
+	  </article>
+	  <article class="service col-sm-4 col-lg-4">
+	  	<div class="icon-lg">
+	  		<span class="glyphicon glyphicon-user"></span>
+	  	</div><!-- icon-lg -->
+			<h3>テストメール受信</h3>
+			<p>登録直後にメールが送られます。これは迷惑フォルダなどに入って気付かないうちに死亡扱いされて遺書が発想されるのを防ぐためのものです。最初のテストメールの認証をクリックして初めて遺書の送付準備が整います。</p>
+	  </article>
+  </div><!-- container -->
+</div><!-- page -->
+
+<div class="page" id="signup">
+	<div class="container">
+	<article class="col-sm-12 col-lg-12">
+		<h2>はじめよう、明日の死にそなえて</h2>
+	  <%= form_for(:your_will, :url => {:action => 'create'}) do |f| %>
+	  <%= f.label 'メールアドレス' %>
+	  <%= f.email_field :email, autofocus: true, class: "form-control" %>
+	  <%= f.label 'パスワード' %>
+	  <% if @minimum_password_length %>
+	  <em>(<%= @minimum_password_length %> characters minimum)</em>
+	  <% end %>
+	  <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+	  <%= f.label '確認用パスワード' %>
+	  <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+	   <% end %>
+   	</article>
+	</div><!-- container -->
+</div><!-- page -->
+
