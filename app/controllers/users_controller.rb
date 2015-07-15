@@ -3,5 +3,6 @@ class UsersController < ApplicationController
     @user = User.find(current_user.id)
   end
   def death_show
+    @user = User.find(current_user.id)
   end
 end
