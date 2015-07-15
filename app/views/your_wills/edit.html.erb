@@ -1,12 +1,16 @@
-<div class="users will">
-  <h2>Update Will</h2>
-  <%= form_for(:your_will, :url => {:action => 'update', :id => @your_will.id}) do |f| %>
-  <%= render(:partial => "form", :locals => {:f => f}) %>
-    <div class="form-buttons">
-      <%= submit_tag("Update Will") %>
-    </div>
-  <% end %>
-</div>
-<button type="button" class="btn btn-default btn-lg">
-  <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
-</button>
+<div class="page">
+	<div class="container">
+	  <h2>編集</h2>
+	  <%= form_for(:your_will, :url => {:action => 'update', :id => @your_will.id}) do |f| %>
+	  <%= render(:partial => "form", :locals => {:f => f}) %>
+	    <div class="text-center">
+	      <%= submit_tag("更新する", :class => 'btn btn-success btn-lg') %>
+	    </div>
+	  <% end %>
+	</div><!-- container -->
+	<div class="container">
+		<button type="button" class="btn btn-default btn-lg">
+		  <%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+		</button>
+	</div><!-- container -->
+</div><!-- page -->

@@ -1,4 +1,4 @@
-  <div class="alert alert-danger" role="alert"><%= devise_error_messages! %></div>
+  <%= devise_error_messages! %>
   <%= f.label 'メールアドレス' %>
   <%= f.email_field :email, autofocus: true, class: "form-control" %>
   <%= f.label 'パスワード' %>

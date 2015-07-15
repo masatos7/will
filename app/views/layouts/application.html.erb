@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Will</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -24,8 +24,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <a class="navbar-brand" href="#">最後の一言</a>
       </div><!-- navbar-header -->
-      <a class="navbar-brand" href="#">最後の一言</a>
       <div class="collapse navbar-collapse" id="collapse">
         <ul class="nav navbar-nav navbar-center">
           <li><%= link_to "HOME", '#home' %></li>
@@ -35,8 +35,17 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %> 
-          <li><%= link_to 'ユーザー設定', edit_user_registration_path %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">アカウント <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'ユーザー設定のこし', edit_user_registration_path %></li>
+              <li><%= link_to 'ユーザー設定', '/users/show' %></li>
+              <li><%= link_to '死亡判定方法', '/users/death_show' %></li>
+              <li><%= link_to '遺書', '/your_wills' %></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
           <% else %>
          <%= link_to "ユーザー登録", new_user_registration_path, :class => 'btn btn-primary navbar-btn' %>
           <%= link_to "ログイン", new_user_session_path, :class => 'btn btn-primary navbar-btn' %>

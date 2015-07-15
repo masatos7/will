@@ -1,0 +1,21 @@
+<div class="page">
+  <div class="container">
+	  <h2>ユーザー設定</h2>
+    <div class="panel panel-default">
+      <table class="table table-striped">
+			  <tr>
+				  <td>メールアドレス</td>
+					<td><%= @user.email %></td>
+				</tr>
+				<tr>
+					<td>パスワード</td>
+					<td>●●●●●●●●●●</td>
+				</tr>
+		  </table>
+	  </div><!-- panel panel-default -->
+  </div><!-- container -->
+  <div class="text-center">
+    <%= link_to("変更する", {:action => 'edit'}, :class => 'btn btn-success btn-success-custom btn-lg text-center') %>
+  </div><!-- container --> 
+</div><!-- page -->
+

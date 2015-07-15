@@ -1,20 +1,25 @@
-<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
-
-<div class="users will">
-  <h2>Will 内容</h2>
-  <table summary="YourWill form fields">
-    <tr>
-      <th>ユーザーID</th>
-      <td><%= @your_will.user_id %></td>
-    </tr>
-    <tr>
-      <th>宛先メールアドレス</th>
-      <td><%= @your_will.email %></td>
-    </tr>
-    <tr>
-      <th>内容</th>
-      <td><%= @your_will.content %></td>
-    </tr>
-  </table>
-  <%= link_to("編集する", {:action => 'edit', :id => @your_will.id}) %>
-</div>
+<div class="page">
+  <div class="container">
+    <div class="users will">
+      <h2>Will 内容</h2>
+      <div class="panel panel-default">
+        <table class="table table-striped">
+          <tr>
+            <th>ユーザーID</th>
+            <td><%= @your_will.user_id %></td>
+          </tr>
+          <tr>
+            <th>宛先メールアドレス</th>
+            <td><%= @your_will.email %></td>
+          </tr>
+          <tr>
+            <th>内容</th>
+            <td><%= @your_will.content %></td>
+          </tr>
+        </table>
+      </div><!-- panel panel-default -->
+      <%= link_to("編集する", {:action => 'edit', :id => @your_will.id}, :class => 'btn btn-primary') %>
+    </div>
+    <%= link_to("戻る", {:action => 'index'}, :class => 'btn btn-primary') %>
+  </div><!-- container -->
+</div><!-- page -->
