@@ -1,21 +1,28 @@
 <div class="page">
   <div class="container">
 	  <h2>死亡判定方法</h2>
+   	<p>あなたの死亡判定は次のように行われます。</p>
+    <% if notice %>
+    <div class="alert alert-success" role="alert"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger" role="alert"><%= alert %></div>
+    <% end %>
     <div class="panel panel-default">
       <table class="table table-striped">
 			  <tr>
-				  <td>メールアドレス</td>
-					<td><%= @user.email %></td>
+				  <td>カウント</td>
+					<td>あと<%= @user.count %>回</td>
 				</tr>
-				<tr>
-					<td>パスワード</td>
-					<td>●●●●●●●●●●</td>
+			  <tr>
+				  <td>間隔</td>
+					<td><%= @user.interval %>日間隔で送られるメールの確認リンクを一度もクリックしなかったら</td>
 				</tr>
 		  </table>
 	  </div><!-- panel panel-default -->
   </div><!-- container -->
   <div class="text-center">
-    <%= link_to("変更する", {:action => 'edit'}, :class => 'btn btn-success btn-success-custom btn-lg text-center') %>
+    <%= link_to("変更する", {:action => 'death_edit'}, :class => 'btn btn-success btn-success-custom btn-lg text-center') %>
   </div><!-- container --> 
 </div><!-- page -->
 
