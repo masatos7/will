@@ -121,35 +121,52 @@
 	},
 	"file_history":
 	[
-		"/Users/masatos7/Documents/Everyday/book",
-		"/Users/masatos7/Documents/Everyday/diary",
-		"/Users/masatos7/Sites/mates/mates_work",
+		"/Users/masatos7/Sites/will/config/routes.rb",
+		"/Users/masatos7/Sites/will/db/schema.rb",
+		"/Users/masatos7/Sites/will/app/controllers/your_wills_controller.rb",
+		"/Users/masatos7/Sites/will/config.ru",
+		"/Users/masatos7/Sites/will/config/environments/development.rb",
+		"/Users/masatos7/Sites/will/Gemfile",
+		"/Users/masatos7/Sites/will/app/controllers/users_controller.rb",
+		"/Users/masatos7/Sites/will/app/views/users/death_edit.html.erb",
+		"/Users/masatos7/Sites/will/app/views/users/death_show.html.erb",
+		"/Users/masatos7/Sites/will/app/views/users/show.html.erb",
+		"/Users/masatos7/Sites/will/app/views/admin_users/show.html.erb",
+		"/Users/masatos7/Sites/will/app/views/your_wills/edit.html.erb",
+		"/Users/masatos7/Sites/will/app/views/your_wills/index.html.erb",
+		"/Users/masatos7/Sites/will/app/views/users/edit.html.erb",
 		"/Users/masatos7/Sites/will/app/views/layouts/public.html.erb",
+		"/Users/masatos7/Sites/will/app/assets/javascripts/public.js",
+		"/Users/masatos7/Sites/will/app/views/users/death.html.erb",
+		"/Users/masatos7/Sites/will/Gemfile.lock",
+		"/Users/masatos7/Sites/will/app/views/devise/registrations/edit.html.erb",
+		"/Users/masatos7/Sites/will/app/views/layouts/application.html.erb",
+		"/Users/masatos7/Sites/will/app/views/devise/registrations/show.html.erb",
+		"/Users/masatos7/Sites/will/app/controllers/public_controller.rb",
+		"/Users/masatos7/Sites/will/app/views/your_wills/show.html.erb",
+		"/Users/masatos7/Sites/will/app/views/your_wills/_form.html.erb",
+		"/Users/masatos7/Sites/will/app/assets/stylesheets/application.css",
+		"/Users/masatos7/Sites/will/public/less/custom.less",
+		"/Users/masatos7/Downloads/bootstrap-3.3.5/less/variables.less",
+		"/Users/masatos7/Sites/will/public/less/carousel.less",
+		"/Users/masatos7/Sites/will/app/views/devise/registrations/new.html.erb",
+		"/Users/masatos7/Sites/will/app/views/devise/registrations/_form.html.erb",
 		"/Users/masatos7/Sites/will/app/views/public/index.html.erb",
+		"/Users/masatos7/Sites/will/public/less/variables.less",
 		"/Users/masatos7/Sites/mates/html/less/bootstrap.less",
 		"/Users/masatos7/Sites/mates/html/index.html",
 		"/Users/masatos7/Sites/mates/html/less/variables.less",
 		"/Users/masatos7/Sites/mates/html/less/mixins.less",
 		"/Users/masatos7/Sites/will/public/css/less.min.js",
 		"/Users/masatos7/Sites/will/public/css/new.less",
-		"/Users/masatos7/Sites/will/app/controllers/public_controller.rb",
-		"/Users/masatos7/Sites/will/app/views/layouts/application.html.erb",
-		"/Users/masatos7/Sites/will/app/views/devise/registrations/edit.html.erb",
-		"/Users/masatos7/Sites/will/app/assets/stylesheets/application.css",
 		"/Users/masatos7/Documents/mates_work/html/index.html",
-		"/Users/masatos7/Sites/will/Gemfile",
+		"/Users/masatos7/Documents/Everyday/diary",
 		"/Users/masatos7/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/masatos7/Downloads/bootstrap-3.3.5/less/dropdowns.less",
 		"/Users/masatos7/Documents/Everyday/mates_work",
+		"/Users/masatos7/Documents/Everyday/book",
 		"/Users/masatos7/Sites/will/tmp/cache/assets/development/sprockets/014905c6f30871097e1e74f6256bd430",
-		"/Users/masatos7/Sites/will/app/views/your_wills/_form.html.erb",
-		"/Users/masatos7/Sites/will/app/views/devise/registrations/new.html.erb",
-		"/Users/masatos7/Sites/will/app/views/your_wills/index.html.erb",
-		"/Users/masatos7/Sites/will/app/views/devise/registrations/_form.html.erb",
-		"/Users/masatos7/Sites/will/app/controllers/your_wills_controller.rb",
-		"/Users/masatos7/Sites/will/app/assets/javascripts/public.js",
 		"/Users/masatos7/Sites/will/app/assets/javascripts/application.js",
-		"/Users/masatos7/Sites/will/db/schema.rb",
 		"/Users/masatos7/Sites/will/app/views/devise/sessions/new.html.erb",
 		"/Users/masatos7/Sites/will/db/migrate/20150621112109_add_interval_for_users.rb",
 		"/Users/masatos7/Sites/will/app/views/comments/new.html.erb",
@@ -165,7 +182,6 @@
 		"/Users/masatos7/Sites/will/app/views/your_wills/delete.html.erb",
 		"/Users/masatos7/Documents/ダンスメモ/日記",
 		"/Users/masatos7/Sites/will/app/views/comments/edit.html.erb",
-		"/Users/masatos7/Sites/will/Gemfile.lock",
 		"/Users/masatos7/Sites/will/app/views/_users/edit.html.erb",
 		"/Users/masatos7/Sites/will/app/views/admin_users/edit.html.erb",
 		"/Users/masatos7/Sites/will/app/views/post_mailer/post_email.html.erb",
@@ -173,12 +189,10 @@
 		"/Users/masatos7/Sites/will/app/views/_access/index.html.erb",
 		"/Users/masatos7/Sites/mail_basis/config/environments/development.rb",
 		"/Users/masatos7/Sites/mail_basis/config/environment.rb",
-		"/Users/masatos7/Sites/will/config/environments/development.rb",
 		"/Users/masatos7/Sites/will/app/mailers/post_mailer.rb",
 		"/Users/masatos7/Sites/mail_basis/app/views/post_mailer/post_email.text.erb",
 		"/Users/masatos7/Sites/mail_basis/app/mailers/post_mailer.rb",
 		"/Users/masatos7/Sites/mail_basis/config/routes.rb",
-		"/Users/masatos7/Sites/will/app/views/your_wills/edit.html.erb",
 		"/Users/masatos7/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/masatos7/Sites/will/tmp/cache/assets/development/sprockets/v3.0/85XN-hxgaH0jaYD-kBrjpgViA9pEovGUcQWCFeQDamc.cache",
 		"/Users/masatos7/Sites/mail_basis/app/controllers/posts_controller.rb",
@@ -190,14 +204,12 @@
 		"/Users/masatos7/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
 		"/Users/masatos7/Sites/will/lib/tasks/.keep",
 		"/Users/masatos7/Sites/will/.gitignore",
-		"/Users/masatos7/Sites/will/config/routes.rb",
 		"/Users/masatos7/Sites/will/db/migrate/20150610221626_devise_create_users.rb",
 		"/Users/masatos7/Sites/will/app/models/user.rb",
 		"/Users/masatos7/Sites/will/app/views/_users/index.html.erb",
 		"/Users/masatos7/Sites/will/app/models/admin_user.rb",
 		"/Users/masatos7/Sites/will/app/controllers/application_controller.rb",
 		"/Users/masatos7/Sites/will/app/views/devise/mailer/confirmation_instructions.html.erb",
-		"/Users/masatos7/Sites/will/app/views/your_wills/show.html.erb",
 		"/Users/masatos7/Sites/will/app/assets/stylesheets/custom.css.scss",
 		"/Users/masatos7/Sites/will/test.txt",
 		"/Users/masatos7/Sites/will/db/migrate/20150607112822_change_datatype_content_of_your_will.rb",
@@ -208,8 +220,6 @@
 		"/Users/masatos7/Sites/sample_app/config/initializers/secret_token.rb",
 		"/Users/masatos7/Sites/will/test/controllers/users_controller_test.rb",
 		"/Users/masatos7/Sites/will/app/views/admin_access/index.html.erb",
-		"/Users/masatos7/Sites/will/app/views/users/edit.html.erb",
-		"/Users/masatos7/Sites/will/app/controllers/users_controller.rb",
 		"/Users/masatos7/Sites/will/app/views/users/new.html.erb",
 		"/Users/masatos7/Sites/devise/app/models/user.rb",
 		"/Users/masatos7/Sites/devise/db/migrate/20150609021341_devise_create_users.rb",
@@ -218,7 +228,6 @@
 		"/Users/masatos7/Sites/devise/config/environments/development.rb",
 		"/Users/masatos7/Sites/will/app/views/users/complete.html.erb",
 		"/Users/masatos7/Sites/will/app/views/users/index.html.erb",
-		"/Users/masatos7/Sites/will/app/views/users/show.html.erb",
 		"/Users/masatos7/Sites/will/app/views/users/_form.html.erb",
 		"/Users/masatos7/Sites/will/app/views/access/index.html.erb",
 		"/Users/masatos7/Sites/will/app/views/your_wills/new.html.erb",
@@ -235,24 +244,15 @@
 		"/Users/masatos7/Sites/will/db/migrate/20150605223519_add_user_passworddigest.rb",
 		"/Users/masatos7/Sites/demo_app/app/controllers/users_controller.rb",
 		"/Users/masatos7/Sites/will/app/views/admin_users/new.html.erb",
-		"/Users/masatos7/Sites/will/app/views/admin_users/show.html.erb",
 		"/Users/masatos7/Sites/will/app/controllers/access_controller.rb",
 		"/Users/masatos7/Sites/will/test/models/admin_user_test.rb",
 		"/Users/masatos7/Sites/demo_app/test/controllers/users_controller_test.rb",
 		"/Users/masatos7/Desktop/repos/git-basics/index.html",
-		"/Users/masatos7/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 15/15_06/simple_cms/app/views/access/index.html.erb",
-		"/Users/masatos7/Sites/will/app/views/admin_users/index.html.erb",
-		"/Users/masatos7/Sites/simple_cms/app/views/subjects/delete.html.erb",
-		"/Users/masatos7/Sites/simple_cms/app/views/subjects/edit.html.erb",
-		"/Users/masatos7/Sites/simple_cms/app/views/access/login.html.erb",
-		"/Users/masatos7/Sites/simple_cms/app/views/access/index.html.erb",
-		"/Users/masatos7/Sites/will/app/views/access/login.html.erb",
-		"/Users/masatos7/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 15/15_06/simple_cms/app/controllers/access_controller.rb",
-		"/Users/masatos7/Sites/will/app/views/application/error_messages.html.erb"
+		"/Users/masatos7/Downloads/Ex_Files_ROR4_EssT/Exercise Files/Chapter 15/15_06/simple_cms/app/views/access/index.html.erb"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -267,7 +267,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"2f13187464",
+			"table",
+			"container",
 			"@",
 			"lett",
 			"container",
@@ -443,12 +444,144 @@
 		"selected_items":
 		[
 			[
-				"book",
-				"book"
+				"",
+				"app/views/users/death_show.html.erb"
 			],
 			[
-				"diary",
-				"diary"
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"usercontroller",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"config",
+				"config.ru"
+			],
+			[
+				"devlo",
+				"config/environments/development.rb"
+			],
+			[
+				"yourcont",
+				"app/controllers/your_wills_controller.rb"
+			],
+			[
+				"usercontrol",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"usesconto",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"userscontroller",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"usersshow",
+				"app/views/admin_users/show.html.erb"
+			],
+			[
+				"death",
+				"app/views/users/death.html.erb"
+			],
+			[
+				"your_willedit",
+				"app/views/your_wills/edit.html.erb"
+			],
+			[
+				"your_willindex",
+				"app/views/your_wills/index.html.erb"
+			],
+			[
+				"usershow",
+				"app/views/users/show.html.erb"
+			],
+			[
+				"your_willcontroller",
+				"app/controllers/your_wills_controller.rb"
+			],
+			[
+				"usercontroll",
+				"app/controllers/users_controller.rb"
+			],
+			[
+				"layoutappli",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"public.h",
+				"app/views/layouts/public.html.erb"
+			],
+			[
+				"public",
+				"app/assets/javascripts/public.js"
+			],
+			[
+				"appli",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"edit",
+				"app/views/devise/registrations/edit.html.erb"
+			],
+			[
+				"publicindex",
+				"app/views/public/index.html.erb"
+			],
+			[
+				"index",
+				"app/views/your_wills/index.html.erb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"applicationhtml",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"your_willform",
+				"app/views/your_wills/_form.html.erb"
+			],
+			[
+				"your_willsindex",
+				"app/views/your_wills/index.html.erb"
+			],
+			[
+				"registrationnew",
+				"app/views/devise/registrations/new.html.erb"
+			],
+			[
+				"controllerpubli",
+				"app/controllers/public_controller.rb"
+			],
+			[
+				"layoutapplicatio",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"vara",
+				"public/less/variables.less"
+			],
+			[
+				"lesscustom",
+				"public/less/custom.less"
+			],
+			[
+				"application.css",
+				"app/assets/stylesheets/application.css"
 			],
 			[
 				"bootstarpless",
@@ -465,6 +598,10 @@
 			[
 				"bootless",
 				"mates/html/less/bootstrap.less"
+			],
+			[
+				"diary",
+				"Everyday/diary"
 			],
 			[
 				"mates",
@@ -495,20 +632,16 @@
 				"will/app/controllers/public_controller.rb"
 			],
 			[
-				"gem",
-				"will/Gemfile"
-			],
-			[
-				"publicindex",
-				"will/app/views/public/index.html.erb"
-			],
-			[
 				"layoutapplication",
 				"will/app/views/layouts/application.html.erb"
 			],
 			[
 				"registrationedit",
 				"will/app/views/devise/registrations/edit.html.erb"
+			],
+			[
+				"book",
+				"Everyday/book"
 			],
 			[
 				"matesindex",
@@ -525,10 +658,6 @@
 			[
 				"yourwillnew",
 				"will/app/views/your_wills/new.html.erb"
-			],
-			[
-				"",
-				"will/app/assets/stylesheets/application.css"
 			],
 			[
 				"pubin",
@@ -551,10 +680,6 @@
 				"will/app/views/your_wills/index.html.erb"
 			],
 			[
-				"registrationnew",
-				"will/app/views/devise/registrations/new.html.erb"
-			],
-			[
 				"registration",
 				"will/app/views/devise/registrations/edit.html.erb"
 			],
@@ -573,10 +698,6 @@
 			[
 				"application",
 				"will/config/application.rb"
-			],
-			[
-				"schema",
-				"will/db/schema.rb"
 			],
 			[
 				"schelam",
@@ -605,14 +726,6 @@
 			[
 				"layoutapplicat",
 				"will/app/views/layouts/application.html.erb"
-			],
-			[
-				"your_willsindex",
-				"will/app/views/your_wills/index.html.erb"
-			],
-			[
-				"application.css",
-				"will/app/assets/stylesheets/application.css"
 			],
 			[
 				"comment_form",
@@ -695,15 +808,7 @@
 				"will/app/views/public/about.html.erb"
 			],
 			[
-				"layoutappli",
-				"will/app/views/layouts/application.html.erb"
-			],
-			[
 				"your_will",
-				"will/app/views/your_wills/edit.html.erb"
-			],
-			[
-				"your_willedit",
 				"will/app/views/your_wills/edit.html.erb"
 			],
 			[
@@ -739,10 +844,6 @@
 				"will/config/environments/development.rb"
 			],
 			[
-				"route",
-				"mail_basis/config/routes.rb"
-			],
-			[
 				"your_wills/",
 				"app/views/your_wills/index.html.erb"
 			],
@@ -761,14 +862,6 @@
 			[
 				"log",
 				"log/test.log"
-			],
-			[
-				"index",
-				"app/views/_access/index.html.erb"
-			],
-			[
-				"your_willindex",
-				"will/app/views/your_wills/index.html.erb"
 			],
 			[
 				"publichow",
@@ -861,98 +954,6 @@
 			[
 				"willschema",
 				"will/db/schema.rb"
-			],
-			[
-				"willroute",
-				"will/config/routes.rb"
-			],
-			[
-				"willrountes",
-				"will/test/controllers/users_controller_test.rb"
-			],
-			[
-				"sample_app/rou",
-				"sample_app/config/routes.rb"
-			],
-			[
-				"sample_app/gem",
-				"sample_app/Gemfile"
-			],
-			[
-				"models/micropos",
-				"demo_app/app/models/micropost.rb"
-			],
-			[
-				"models/user.rb",
-				"demo_app/app/models/user.rb"
-			],
-			[
-				"models/micropost",
-				"demo_app/app/models/micropost.rb"
-			],
-			[
-				"config/routes",
-				"demo_app/config/routes.rb"
-			],
-			[
-				"routes",
-				"will/config/routes.rb"
-			],
-			[
-				"users_controller",
-				"will/app/controllers/users_controller.rb"
-			],
-			[
-				"will/routes",
-				"will/config/routes.rb"
-			],
-			[
-				"controller/users_controller",
-				"will/app/controllers/users_controller.rb"
-			],
-			[
-				"models/admin_users",
-				"will/test/models/admin_user_test.rb"
-			],
-			[
-				"user_cnt",
-				"demo_app/test/controllers/users_controller_test.rb"
-			],
-			[
-				"controller/user",
-				"demo_app/app/controllers/users_controller.rb"
-			],
-			[
-				"pu",
-				"will/app/controllers/public_controller.rb"
-			],
-			[
-				"application_controller",
-				"will/app/controllers/application_controller.rb"
-			],
-			[
-				"access_controller",
-				"will/app/controllers/access_controller.rb"
-			],
-			[
-				"admin_user",
-				"will/app/models/admin_user.rb"
-			],
-			[
-				"application_cont",
-				"will/app/controllers/application_controller.rb"
-			],
-			[
-				"acces",
-				"will/app/controllers/access_controller.rb"
-			],
-			[
-				"access",
-				"will/app/controllers/access_controller.rb"
-			],
-			[
-				"usersindex",
-				"will/app/views/users/index.html.erb"
 			]
 		],
 		"width": 0.0
