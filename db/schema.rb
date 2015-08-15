@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721223923) do
+ActiveRecord::Schema.define(version: 20150803224848) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",           limit: 255, default: "", null: false
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150721223923) do
     t.integer  "interval",               limit: 4
     t.datetime "death_update_at"
     t.integer  "miss_count",             limit: 4
+    t.datetime "next_confirmation_at"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
